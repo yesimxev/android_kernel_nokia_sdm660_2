@@ -16,6 +16,7 @@ hostprogs-y += tracex5
 hostprogs-y += tracex6
 hostprogs-y += trace_output
 hostprogs-y += lathist
+hostprogs-y += test_cgrp2_attach
 
 test_verifier-objs := test_verifier.o libbpf.o
 test_maps-objs := test_maps.o libbpf.o
@@ -32,6 +33,7 @@ tracex5-objs := bpf_load.o libbpf.o tracex5_user.o
 tracex6-objs := bpf_load.o libbpf.o tracex6_user.o
 trace_output-objs := bpf_load.o libbpf.o trace_output_user.o
 lathist-objs := bpf_load.o libbpf.o lathist_user.o
+test_cgrp2_attach-objs := libbpf.o test_cgrp2_attach.o
 
 # Tell kbuild to always build the programs
 always := $(hostprogs-y)
